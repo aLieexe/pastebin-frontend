@@ -1,3 +1,3 @@
 docker build \
-  --build-arg VITE_API_URL=https://api.example.com \
+  --build-arg VITE_API_URL=http://backend:8080 \
   -t paste-frontend .

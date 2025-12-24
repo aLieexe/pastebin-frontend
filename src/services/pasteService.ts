@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Paste } from '../types/paste';
 
 // How to use something from .env instead
-const apiUrl = import.meta.env.VITE_API_URL ?? 'http://localhost:8080';
+const apiUrl = "/api";
 
 export const createPaste = async (content: string): Promise<Paste> => {
     const response = await axios.post(`${apiUrl}/pastes`, { content });

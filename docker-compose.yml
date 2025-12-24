@@ -1,0 +1,42 @@
+services:
+  frontend:
+    image: paste-frontend
+    ports:
+      - "80:80"
+
+    depends_on:
+      - backend
+
+  backend:
+    image: pastebin-backend
+    expose:
+      - "8080"
+    env_file:
+      - .env
+    
+    depends_on:
+      postgres:
+        condition: service_healthy
+        restart: true
+
+
+  postgres:
+    container_name: pastebin-postgres
+    image: postgres:17.7-bookworm
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - test_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h localhost -p 5432"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  test_postgres_data:
