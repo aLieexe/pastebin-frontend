@@ -1,0 +1,50 @@
+.pasteList {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pasteList h2 {
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+.pasteList ul {
+    list-style: none;
+}
+
+.pasteItem {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #1a1d23;
+    border: 1px solid #3a3f47;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.pasteItem:hover {
+    border-color: #61dafb;
+}
+
+.pasteLink {
+    color: #61dafb;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pasteLink:hover {
+    text-decoration: underline;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.error {
+    color: #ff6b6b;
+}

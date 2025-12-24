@@ -1,0 +1,85 @@
+/* styles specific to the App component */
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.mainContent {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer {
+    background-color: #282c34;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.editorForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.editorTextarea {
+    width: 100%;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border: 2px solid #3a3f47;
+    border-radius: 4px;
+    background-color: #1a1d23;
+    color: #ffffff;
+    resize: vertical;
+}
+
+.editorTextarea:focus {
+    outline: none;
+    border-color: #61dafb;
+}
+
+.editorTextarea:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.submitButton {
+    padding: 12px 24px;
+    background-color: #61dafb;
+    color: #1a1d23;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submitButton:hover:not(:disabled) {
+    background-color: #4fa8c5;
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.errorMessage {
+    color: #ff6b6b;
+    padding: 10px;
+    background-color: #2a1a1a;
+    border-radius: 4px;
+    border-left: 4px solid #ff6b6b;
+}

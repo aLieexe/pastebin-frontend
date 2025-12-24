@@ -1,0 +1,42 @@
+.pasteView {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pasteView h1 {
+    color: #61dafb;
+    margin-bottom: 10px;
+}
+
+.pasteId {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.pasteContent {
+    background-color: #1a1d23;
+    padding: 20px;
+    border: 1px solid #3a3f47;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #ffffff;
+}
+
+.pasteMetadata {
+    margin-top: 15px;
+    color: #888;
+    font-size: 14px;
+}
+
+.loading, .error, .notFound {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.error, .notFound {
+    color: #ff6b6b;
+}
