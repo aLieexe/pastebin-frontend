@@ -18,7 +18,7 @@ RUN npm run build
 # Production stage
 FROM caddy:2.11-alpine
 
-RUN apk add --no-cache curl
+RUN apk add --no-cache curl wget
 
 # Copy built assets from build stage
 COPY --from=build /app/dist /srv
